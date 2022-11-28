@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from flask import Flask, render_template, redirect, send_file
 from json import load, dump
 from io import StringIO, BytesIO
@@ -51,3 +52,6 @@ def writeJson(eventName, ticketNumber):
 	event.append(ticketNumber)
 	with open(f"{eventName}.json", "w") as fp:
 		return dump(event, fp, cls=EventEncoder)
+
+if __name__ == "__main__":
+    app.run()
