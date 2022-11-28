@@ -32,7 +32,7 @@ def serve_pil_image(pil_img):
 
 @app.route("/<eventName>/qrcode/<int:ticketNumber>/")
 def generate_qrcode(eventName, ticketNumber):
-	img = qrcode.make(f"http://svplacathédrale.ca/{eventName}/verify/{ticketNumber}")
+	img = qrcode.make(f"http://svplacath%C3%A9drale.ca/{eventName}/verify/{ticketNumber}")
 	return serve_pil_image(img)
 
 

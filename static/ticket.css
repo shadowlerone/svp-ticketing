@@ -2,9 +2,10 @@
 	border: 1px solid black;
 	font-family:Arial, Helvetica, sans-serif;
 	padding: 0.5rem;
-	margin-top: 0.25rem;
+	/* margin-top: 0.25rem; */
 	display: flex;
 	justify-content: space-between;
+	/* line-height: 0.75; */
 	/* width: 1rem; */
 }
 .ticket:after {
@@ -13,15 +14,15 @@
 	clear: both;
 }
 
-.ticket .image, .ticket .text {
+/* .ticket .image, .ticket .text {
 	flex: 50%;
-}
+} */
 img {
 	max-width: 150px;
 }
 .ticket {
 	break-inside: avoid;
-	font-size: 0.25rem;
+	/* font-size: 0.25rem; */
 	flex: 30%;
 }
 .tickets {
@@ -29,21 +30,36 @@ img {
 	flex-wrap: wrap;
 	flex-direction: column;
 	align-content: flex-start;
-	max-height:100%;
-	max-width:50%;
+	/* max-height:100%; */
+	/* max-width:50%; */
 	/* max-height: 200vh; */
 }
 @media print {
 	img {
-		max-width: 100px;
+		max-width: 150px;
+	}
+	.text {
+		flex: 5;
+		break-inside: avoid;
+	}
+	.image {
+		break-inside: avoid;
+	}
+	.ticket *, .ticket {
+		break-inside: avoid;
+		page-break-inside: avoid;
+		page-break-after: auto;
 	}
 	.ticket {
-		break-inside: avoid;
-		font-size: xx-small;
-		flex: 40%;
+		break-inside: avoid-page;
+		width: 95%;
+		font-size:0.75em;
+		margin-top: 0.25em;
+		/* flex: 40%; */
 		/* max-width: 50%; */
 	}
 	.tickets {
+		/* break-inside: avoid-page; */
 		display:flex;
 		flex-wrap: wrap;
 		flex-direction: column;
