@@ -3,6 +3,9 @@ from flask import Flask, render_template, redirect, send_file
 from json import load, dump
 from io import StringIO, BytesIO
 import qrcode
+import os
+import sys
+sys.path.insert(0, os.path.dirname(__file__))
 
 from event import Event, EventEncoder, EventDecoder
 
