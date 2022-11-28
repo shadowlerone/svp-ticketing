@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+
+	<title>Tickets</title>
+	<link rel="stylesheet" href="/static/ticket.css">
+
+</head>
+<body>
+	<div class="tickets">
+	{%for t in range(tickets)%}
+	<div class="ticket">
+		<div class="text">
+			<h1>Souper de Noël de la Cathédrale Marie-Reine du Monde</h1>
+			<h2>Le 17 décembre à 18h00</h2>
+			<h2>1110 Rue Mansfield</h2>
+			<h2>Coût 1.00$</h2>
+			<h3>Personne ne peut entrer sans billet.</h3>
+			<h3>Ce billet est valide pour une personne.</h3>
+			<h3>Billet #{{t}}</h3>
+		</div>
+		<div class="image">
+			<img src="/{{ eventName }}/qrcode/{{ t }}/">
+		</div>
+	</div>
+	{%endfor%}
+	</div>
+</body>

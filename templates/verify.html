@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<head>
+
+	<title>Verifying</title>
+	<link rel="stylesheet" href="/static/style.css">
+</head>
+
+	<body {% if valid %}class="valid"{% else %}class="invalid"{% endif %}>
+		{% if valid %}
+		Valid
+		{% else %} 
+		Invalid
+		{% endif %}
+	</body>
+
